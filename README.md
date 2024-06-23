@@ -102,6 +102,25 @@ bunx shadcn-ui@latest add button
 ```
 
 ## [13:01](https://www.youtube.com/watch?v=N_uNKAus0II&t=781s) Authentication
+- auth 폴더 생성
+  - [sign-in, sign-up 폴더 및 페이지 생성](https://clerk.com/docs/references/nextjs/custom-signup-signin-pages?_gl=1*1xwelyh*_gcl_au*MTYzOTcyNTY4My4xNzE5MTEzMzkw*_ga*NjYxMjQ0MTMzLjE3MDA3NDY5ODM.*_ga_1WMF5X234K*MTcxOTExNjA5OS4xNy4xLjE3MTkxMTYzNjkuMC4wLjA.)
+  - 
+- clerk 연동
+- `middleware.ts` 수정
+  - [routerMatch](https://clerk.com/docs/references/nextjs/clerk-middleware#create-route-matcher) 로 루트 접근시 리디렉트 처리
+
+### [Clerk 연동](https://dashboard.clerk.com/apps/app_2iGTtgSY2dO4QKo33k7nCIvzpmT/instances/ins_2iGTtc4Lld8yHwG3isMuctvd9zh)
+- clerk 설치
+  - `bun add @clerk/nextjs`
+- 환경변수 설정
+  - `.env.local` 추가
+- ClerkProvider 추가
+  - app/layout.tsx 수정
+  - html 태그를 ClerkProvider 로 래핑
+- 미들웨어 추가 
+  - middleware.ts 생성
+  - 
+
 
 ## [42:18](https://www.youtube.com/watch?v=N_uNKAus0II&t=2538s) Hono.js setup
 
