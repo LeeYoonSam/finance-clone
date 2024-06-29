@@ -122,6 +122,42 @@ bunx shadcn-ui@latest add button
 
 
 ## [42:18](https://www.youtube.com/watch?v=N_uNKAus0II&t=2538s) Hono.js setup
+- hono 설치
+  - `bun add hono`
+  - [앱 라우터 사용법](https://hono.dev/docs/getting-started/vercel#_2-hello-world)
+- app/api/[[...route]]/route.ts
+  - hono 앱 라우터 추가
+- `RPC - Server`
+  - RPC 기능을 사용하면 서버와 클라이언트 간에 API 사양을 공유할 수 있습니다.
+  - `bun add @hono/zod-validator`
+    - 서버 측에서 해야 할 일은 유효성 검사기를 작성하고 가변 경로를 생성
+  - `bun run zo`
+- [middleware 설정](https://github.com/honojs/middleware/tree/main/packages/clerk-auth)
+  - `bun add @hono/clerk-auth`
+  - `bun add @clerk/backend`
+  - .env.local 추가
+    - CLERK_PUBLISHABLE_KEY
+
+### [Hono](https://hono.dev/)
+일본어로 불꽃을 뜻하는 Hono는 웹 표준을 기반으로 구축된 작고 간단하며 초고속 웹 프레임워크입니다. 
+
+모든 JavaScript 런타임에서 작동합니다: Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Netlify, AWS Lambda, Lambda@Edge 및 Node.js.
+
+**Use-cases**
+Hono는 프론트엔드가 없는 Express와 유사한 간단한 웹 애플리케이션 프레임워크입니다. 하지만 CDN 에지에서 실행되며 미들웨어와 결합하면 더 큰 규모의 애플리케이션을 구축할 수 있습니다. 
+- Building Web APIs
+- Proxy of backend servers
+- Front of CDN
+- Edge application
+- Base server for a library
+- Full-stack application
+
+**[Third-part Middleware](https://hono.dev/docs/middleware/third-party)**
+- 타사 미들웨어는 Hono 패키지에 번들로 제공되지 않는 미들웨어를 말합니다. 이러한 미들웨어는 대부분 외부 라이브러리를 활용합니다.
+
+**[Best Practices](https://hono.dev/docs/guides/best-practices)**
+Hono는 매우 유연합니다. 원하는 대로 앱을 작성할 수 있습니다. 하지만 따르는 것이 더 좋은 모범 사례가 있습니다.
+
 
 ## [01:10:49](https://www.youtube.com/watch?v=N_uNKAus0II&t=4249s) Header component
 
