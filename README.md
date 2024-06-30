@@ -181,6 +181,27 @@ Hono는 매우 유연합니다. 원하는 대로 앱을 작성할 수 있습니�
   
 
 ## [01:46:27](https://www.youtube.com/watch?v=N_uNKAus0II&t=6387s) Drizzle ORM & Neon Database
+- [Neon](https://console.neon.tech/app/projects) 프로젝트 생성
+- [Drizzle](postgresql://finance_owner:FSOPrLUak43J@ep-falling-credit-a5r1jrv6.us-east-2.aws.neon.tech/finance?sslmode=require) 설치
+  - `bun add drizzle-orm @neondatabase/serverless`
+  - `bun add -D drizzle-kit`
+  - `bun add drizzle-zod`
+- dotenv 설치
+  - 환경 변수를 .env 파일로 관리하기
+  - `bun add dotenv`
+- `db/drizzle.ts` 생성
+  - DB 연결
+- `db/schema.ts` 생성
+  - accounts 스키마 생성
+- `scripts/migrate.ts` 생성
+  - neon DB 마이그레이션 스크립트
+- `package.json` 스크립트 추가
+  - db:generate
+  - db:migrate
+  - db:studio
+- `drizzle.config.ts` 생성
+  - drizzle 설정 파일 속성 지정
+
 
 ## [02:10:50](https://www.youtube.com/watch?v=N_uNKAus0II&t=7850s) Accounts GET API
 
