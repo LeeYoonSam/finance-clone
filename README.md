@@ -160,6 +160,25 @@ Hono는 매우 유연합니다. 원하는 대로 앱을 작성할 수 있습니�
 
 
 ## [01:10:49](https://www.youtube.com/watch?v=N_uNKAus0II&t=4249s) Header component
+- app/(dashboard)/layout.tsx 생성
+  - 대시보드용 레이아웃 생성 및 헤더 추가
+- components/header.tsx 생성
+  - 전체 헤더 컴포넌트
+- components/header-logo.tsx 생성
+  - 헤더 컴포넌트 로고
+- components/navigation.tsx 생성
+  - 헤더 네비게이션 컴포넌트(모바일용 sheet sidebar/웹용 분리)
+  - sheet, [react-use](https://github.com/streamich/react-use) 설치
+    - `bunx shadcn-ui@latest add sheet`
+    - `bun add react-use`
+    - useMedia 사용
+      - CSS 미디어 쿼리의 상태를 추적
+      - 모바일 화면인지 아닌지 판단하는데 사용
+- components/nav-button.tsx 생성
+  - 네비게이션 컴포넌트 버튼 메뉴
+- components/welcome-msg.tsx 생성
+  - 웰컴 메시지 컴포넌트
+  
 
 ## [01:46:27](https://www.youtube.com/watch?v=N_uNKAus0II&t=6387s) Drizzle ORM & Neon Database
 
