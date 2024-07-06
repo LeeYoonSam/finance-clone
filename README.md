@@ -204,6 +204,23 @@ Hono는 매우 유연합니다. 원하는 대로 앱을 작성할 수 있습니�
 
 
 ## [02:10:50](https://www.youtube.com/watch?v=N_uNKAus0II&t=7850s) Accounts GET API
+- app/api/[[...route]]/accounts.ts 생성
+  - 계정 관련 api 추가
+  - clerk 인증 추가
+- app/api/[[...route]]/route.ts 수정
+  - account 추가
+- react-query 추가
+- Server Rendering initial setup
+  - providers/query-provider.tsx 생성
+- app/layout.tsx 수정
+  - QueryProvider 추가
+
+### [TanStack - ReactQuery](https://tanstack.com/query/latest/docs/framework/react/overview)
+**리액트 쿼리란?**
+- fetching, caching, 서버 데이터와의 동기화를 지원해주는 라이브러리
+- bun add @tanstack/react-query
+- [Server Rendering initial setup](https://tanstack.com/query/latest/docs/framework/react/guides/advanced-ssr)
+
 
 ## [02:43:26](https://www.youtube.com/watch?v=N_uNKAus0II&t=9806s) Accounts POST API
 
