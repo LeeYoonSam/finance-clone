@@ -254,6 +254,26 @@ Hono는 매우 유연합니다. 원하는 대로 앱을 작성할 수 있습니�
 
 
 ## [03:29:03](https://www.youtube.com/watch?v=N_uNKAus0II&t=12543s) Data table component
+- app/(dashboard)/accounts/page.tsx 생성
+  - Accounts 페이지
+  - 계정 추가 카드 컴포넌트
+    - 마이너스(-) 로 컴포넌트 위치 변경 (-mt-24)
+- Card 컴포넌트 추가
+  - `bunx shadcn-ui@latest add card`
+- DataTable 구현
+  - `bunx shadcn-ui@latest add table`
+  - `bun install @tanstack/react-table`
+  - app/(dashboard)/accounts/columns.ts 생성
+    - 테이블 컬럼 지정
+    - Sort 적용
+    - CheckBox 추가
+  - components/data-table.tsx 생성
+    - 테이블 컬럼 지정
+    - Sort 적용
+    - Row Selection 적용
+      - `bunx shadcn-ui@latest add checkbox`
+    - 삭제 버튼 추가
+
 
 ## [04:00:41](https://www.youtube.com/watch?v=N_uNKAus0II&t=14441s) Accounts bulk delete
 
