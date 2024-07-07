@@ -223,6 +223,35 @@ Hono는 매우 유연합니다. 원하는 대로 앱을 작성할 수 있습니�
 
 
 ## [02:43:26](https://www.youtube.com/watch?v=N_uNKAus0II&t=9806s) Accounts POST API
+- drizzle-zod 설치
+  - `bun add drizzle-zod`
+- db/schema.ts 수정
+  - drizzle-zod 의 createInsertSchema 으로 accounts 사용
+- [cuid2](https://github.com/paralleldrive/cuid2) 설치
+  - `bun add @paralleldrive/cuid2`
+- app/api/[[...route]]/accounts.ts 수정
+  - Accounts Post API 추가
+- shadcn-ui Form, Input 추가
+  - `bunx shadcn-ui@latest add form`
+  - `bunx shadcn-ui@latest add input`
+- features/accounts/components/new-account-sheet.tsx 추가
+  - 계정 Sheet 컴포넌트
+- providers/sheet-provider.tsx 추가
+  - Sheet 컴포넌트 사용
+- app/layout.tsx 수정
+  - SheetProvider 추가
+  - Toaster 추가
+- zustand 추가 - 상태관리 라이브러리
+  - `bun add zustand`
+- features/accounts/hooks/use-new-account.ts 생성
+  - new account hooks 추가
+- components/ui/sheet.tsx 수정
+  - 오른쪽 시트 크기 및 overflow-y 수정
+- features/accounts/api/use-create-account.ts 생성
+  - 리액트 쿼리를 사용한 계정 생성 API
+- Sonner 토스트 추가
+  - `bunx shadcn-ui@latest add sonner`
+
 
 ## [03:29:03](https://www.youtube.com/watch?v=N_uNKAus0II&t=12543s) Data table component
 
