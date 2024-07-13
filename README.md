@@ -276,6 +276,22 @@ Hono는 매우 유연합니다. 원하는 대로 앱을 작성할 수 있습니�
 
 
 ## [04:00:41](https://www.youtube.com/watch?v=N_uNKAus0II&t=14441s) Accounts bulk delete
+- `app/(dashboard)/accounts/page.tsx`
+  - accountQuery 로 실제 디비에서 Accounts 정보 가져오도록 변경
+  - 스켈레톤 UI 추가
+    - `bunx shadcn-ui@latest add skeleton`
+- `app/(dashboard)/accounts/columns.tsx`
+  - 실제 디비 데이터로 ResponseType 변경
+- `app/api/[[...route]]/accounts.ts`
+  - 대량 삭제 API 추가
+- `features/accounts/api/use-bulk-delete.ts`
+  - 유저 삭제 API 호출
+- `components/data-table.tsx`
+  - onDelete 처리
+  - 다이얼로그훅 적용
+- `hooks/use-confirm.tsx`
+  - 다이얼로그훅 생성
+
 
 ## [04:27:12](https://www.youtube.com/watch?v=N_uNKAus0II&t=16032s) Accounts edit
 
