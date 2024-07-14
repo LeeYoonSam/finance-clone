@@ -276,24 +276,42 @@ Hono는 매우 유연합니다. 원하는 대로 앱을 작성할 수 있습니�
 
 
 ## [04:00:41](https://www.youtube.com/watch?v=N_uNKAus0II&t=14441s) Accounts bulk delete
-- `app/(dashboard)/accounts/page.tsx`
+- `app/(dashboard)/accounts/page.tsx` 수정
   - accountQuery 로 실제 디비에서 Accounts 정보 가져오도록 변경
   - 스켈레톤 UI 추가
     - `bunx shadcn-ui@latest add skeleton`
-- `app/(dashboard)/accounts/columns.tsx`
+- `app/(dashboard)/accounts/columns.tsx` 수정
   - 실제 디비 데이터로 ResponseType 변경
-- `app/api/[[...route]]/accounts.ts`
+- `app/api/[[...route]]/accounts.ts` 수정
   - 대량 삭제 API 추가
-- `features/accounts/api/use-bulk-delete.ts`
+- `features/accounts/api/use-bulk-delete.ts` 생성
   - 유저 삭제 API 호출
-- `components/data-table.tsx`
+- `components/data-table.tsx` 수정
   - onDelete 처리
   - 다이얼로그훅 적용
-- `hooks/use-confirm.tsx`
+- `hooks/use-confirm.tsx` 생성
   - 다이얼로그훅 생성
 
 
 ## [04:27:12](https://www.youtube.com/watch?v=N_uNKAus0II&t=16032s) Accounts edit
+- `app/api/[[...route]]/accounts.ts` 생성
+  - Account 조회 API 추가 `accounts/:id`
+- `features/accounts/api/use-get-account.ts` 생성
+  - Account 조회 ReactQuery 추가
+- `features/accounts/hooks/use-open-accounts.ts` 생성
+  - Account open hooks 추가
+- `features/accounts/components/edit-account-sheet.tsx` 생성
+  - Account 수정 sheet 추가
+  - editMutation 추가
+  - deleteMutation 추가
+- `providers/sheet-provider.tsx` 수정
+  - New/Edit 구분해서 sheet 표시
+  - `bunx shadcn-ui@latest add dropdown-menu`
+- `features/accounts/api/use-edit-account.ts` 생성
+  - Account 수정 ReactQuery 추가
+- `features/accounts/api/use-delete-account.ts` 생성
+  - Account 삭제 ReactQuery 추가
+
 
 ## [05:03:44](https://www.youtube.com/watch?v=N_uNKAus0II&t=18224s) Categories (API + UI)
 
