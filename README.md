@@ -314,6 +314,20 @@ Hono는 매우 유연합니다. 원하는 대로 앱을 작성할 수 있습니�
 
 
 ## [05:03:44](https://www.youtube.com/watch?v=N_uNKAus0II&t=18224s) Categories (API + UI)
+- `db/schema.ts` 수정
+  - categories 테이블 추가
+  - db generate, migrate
+- `app/api/[[...route]]/categories.ts` 생성
+  - categories 관련 API 추가
+- `app/(dashboard)/categories` 생성
+  - accounts 폴더 복제
+  - data 및 네이밍 변경
+- `features/categories` 생성
+  - api, components, hooks 하위 폴더 전체 수정
+  - accounts 폴더 복제해서 이름 및 테이블을 카테고리를 사용하도록 변경
+- `providers/sheet-provider.tsx` 수정
+  - Category sheet 추가
+
 
 ## [05:32:13](https://www.youtube.com/watch?v=N_uNKAus0II&t=19933s) Transactions API
 

@@ -15,6 +15,13 @@
       "when": 1719724765971,
       "tag": "0001_unknown_zuras",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1720932039315,
+      "tag": "0002_cultured_terror",
+      "breakpoints": true
     }
   ]
 }

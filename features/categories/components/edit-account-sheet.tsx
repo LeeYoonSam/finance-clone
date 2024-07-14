@@ -9,32 +9,31 @@ import {
 
 import { Loader2 } from "lucide-react";
 
-import { insertAccountSchmea } from "@/db/schema";
-
-import { useGetAccount } from "@/features/accounts/api/use-get-account";
-import { useOpenAccount } from "@/features/accounts/hooks/use-open-accounts";
-import { AccountForm } from "@/features/accounts/components/account-form";
-import { useEditAccount } from "@/features/accounts/api/use-edit-account";
-import { useDeleteAccount } from "../api/use-delete-account";
 import { useConfirm } from "@/hooks/use-confirm";
+import { insertCategorySchema } from "@/db/schema";
+import { CategoryForm } from "./category-form";
+import { useGetCategory } from "../api/use-get-category";
+import { useEditCategory } from "../api/use-edit-category";
+import { useOpenCategory } from "../hooks/use-open-category";
+import { useDeleteCategory } from "../api/use-delete-category";
 
-const formSchema = insertAccountSchmea.pick({
+const formSchema = insertCategorySchema.pick({
   name: true,
 });
 
 type FormValues = z.input<typeof formSchema>;
 
-export const EditAccountSheet = () => {
-  const { isOpen, onClose, id } = useOpenAccount();
+export const EditCategorySheet = () => {
+  const { isOpen, onClose, id } = useOpenCategory();
 
   const [ConfirmDailog, confirm] = useConfirm(
     "Are you sure?",
-    "You are about to delete this account"
+    "You are about to delete this category"
   );
 
-  const accountQuery = useGetAccount(id);
-  const editMutation = useEditAccount(id);
-  const deleteMutation = useDeleteAccount(id);
+  const accountQuery = useGetCategory(id);
+  const editMutation = useEditCategory(id);
+  const deleteMutation = useDeleteCategory(id);
 
   const isPending =
     editMutation.isPending ||
@@ -74,10 +73,10 @@ export const EditAccountSheet = () => {
         <SheetContent className="space-y-4">
           <SheetHeader>
             <SheetTitle>
-              Edit Account
+              Edit Category
             </SheetTitle>
             <SheetDescription>
-              Edit an existing account
+              Edit an existing category
             </SheetDescription>
           </SheetHeader>
           {isLoading
@@ -86,7 +85,7 @@ export const EditAccountSheet = () => {
                 <Loader2 className="size-4 text-muted-foreground animate-spin" />
               </div>
             ) : (
-              <AccountForm
+              <CategoryForm
                 id={id}
                 onSubmit={onSubmit}
                 disabled={isPending}
