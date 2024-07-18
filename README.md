@@ -330,6 +330,15 @@ Hono는 매우 유연합니다. 원하는 대로 앱을 작성할 수 있습니�
 
 
 ## [05:32:13](https://www.youtube.com/watch?v=N_uNKAus0II&t=19933s) Transactions API
+- `db/schema.ts` 수정
+  - transactions 테이블 추가
+  - relation 지정
+  - 스키마 생성
+- app/api/[[...route]]/route.ts 수정
+  - transactions API 추가
+- `app/api/[[...route]]/transactions.ts` 생성
+  - `bun add date-fns`
+  - get, post, patch, delete, bulk-delete 추가
 
 ## [06:10:36](https://www.youtube.com/watch?v=N_uNKAus0II&t=22236s) Transactions hooks
 
