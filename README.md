@@ -341,6 +341,9 @@ Hono는 매우 유연합니다. 원하는 대로 앱을 작성할 수 있습니�
   - get, post, patch, delete, bulk-delete 추가
 
 ## [06:10:36](https://www.youtube.com/watch?v=N_uNKAus0II&t=22236s) Transactions hooks
+- features/transactions 생성
+  - features/accounts 를 복사해서 transactions 을 만들고 api 수정
+  
 
 ## [06:22:49](https://www.youtube.com/watch?v=N_uNKAus0II&t=22969s) Transactions form
 
