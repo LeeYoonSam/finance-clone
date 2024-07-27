@@ -15,7 +15,7 @@ import { useGetAccount } from "@/features/accounts/api/use-get-account";
 import { useOpenAccount } from "@/features/accounts/hooks/use-open-accounts";
 import { AccountForm } from "@/features/accounts/components/account-form";
 import { useEditAccount } from "@/features/accounts/api/use-edit-account";
-import { useDeleteAccount } from "../api/use-delete-account";
+import { useDeleteTransaction } from "@/features/transactions/api/use-delete-transaction";
 import { useConfirm } from "@/hooks/use-confirm";
 
 const formSchema = insertAccountSchmea.pick({
@@ -34,7 +34,7 @@ export const EditAccountSheet = () => {
 
   const accountQuery = useGetAccount(id);
   const editMutation = useEditAccount(id);
-  const deleteMutation = useDeleteAccount(id);
+  const deleteMutation = useDeleteTransaction(id);
 
   const isPending =
     editMutation.isPending ||

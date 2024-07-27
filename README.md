@@ -346,6 +346,21 @@ Hono는 매우 유연합니다. 원하는 대로 앱을 작성할 수 있습니�
   
 
 ## [06:22:49](https://www.youtube.com/watch?v=N_uNKAus0II&t=22969s) Transactions form
+- `features/transactions/hooks/use-new-transaction.ts` 생성
+- `app/(dashboard)/transactions` 생성
+  - accounts 복사
+  - Transaction History 페이지로 변경
+- `features/transactions/components/new-transaction-sheet.tsx` 생성
+  - 트랜잭션 sheet
+- `providers/sheet-provider.tsx` 수정
+  - NewTransactionSheet 프로바이더 등록
+- `components/select.tsx` 생성
+  - select 컴포넌트 구성
+  - `bun add react-select` 디펜던시 추가
+- `features/transactions/components/transaction-form.tsx` 생성
+  - 트랜잭션 시트 form
+  - account, category 항목 추가
+
 
 ## [07:14:44](https://www.youtube.com/watch?v=N_uNKAus0II&t=26084s) Transactions page
 
