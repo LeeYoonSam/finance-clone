@@ -360,6 +360,19 @@ Hono는 매우 유연합니다. 원하는 대로 앱을 작성할 수 있습니�
 - `features/transactions/components/transaction-form.tsx` 생성
   - 트랜잭션 시트 form
   - account, category 항목 추가
+  - 달력 표시에 사용할 디펜던시 추가
+  - 데이터 피커 추가
+  - 수취인(수령인) 추가
+  - 노트 추가
+    - `bunx shadcn-ui@latest add textarea`
+  - Amount 폼필드 생성
+    - `bun add react-currency-input-field`
+    - `bunx shadcn-ui@latest add tooltip`
+    - `components/amount-input.tsx` 생성
+      - amount 컴포넌트
+- `components/date-picker.tsx` 생성
+  - `bunx shadcn-ui@latest add calendar`
+  - `bunx shadcn-ui@latest add popover`
 
 
 ## [07:14:44](https://www.youtube.com/watch?v=N_uNKAus0II&t=26084s) Transactions page
