@@ -376,6 +376,19 @@ Hono는 매우 유연합니다. 원하는 대로 앱을 작성할 수 있습니�
 
 
 ## [07:14:44](https://www.youtube.com/watch?v=N_uNKAus0II&t=26084s) Transactions page
+- `app/(dashboard)/transactions/page.tsx` 수정
+  - account 로 사용중인 변수 및 함수들 transaction 으로 교체
+- `app/(dashboard)/transactions/columns.tsx` 수정
+  - Data table 에 보여줄 컬럼 추가
+- 뱃지 컴포넌트 디펜던시 추가
+  - `bunx shadcn-ui@latest add badge`
+- `components/ui/badge.tsx` 수정
+  - primary 추가, destructive 수정
+- `lib/utils.ts` 수정
+  - 화폐단위 변환 함수 추가
+- `features/transactions/api/use-get-transactions.ts` 수정
+  - amount 금액 변환 추가
+
 
 ## [07:54:10](https://www.youtube.com/watch?v=N_uNKAus0II&t=28450s) Transactions CSV import
 

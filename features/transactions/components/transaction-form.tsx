@@ -66,7 +66,7 @@ export const TransactionForm = ({
   const handleSubmit = (values: FormValues) => {
     const amount = parseFloat(values.amount);
     const amountInMiliunits = convertAmountToMiliunits(amount);
-    
+
     onSubmit({
       ...values,
       amount: amountInMiliunits,
@@ -80,7 +80,7 @@ export const TransactionForm = ({
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4 pt-4">
-      <FormField
+        <FormField
           name="date"
           control={form.control}
           render={({ field }) => (
@@ -209,5 +209,5 @@ export const TransactionForm = ({
         )}
       </form>
     </Form>
-  )
+  );
 };
