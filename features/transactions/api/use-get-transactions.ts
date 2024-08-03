@@ -12,7 +12,7 @@ export const useGetTransactions = () => {
 
   const query = useQuery({
     // Todo: Check if params are needed in the key
-     queryKey: ["transcactions", { from, to, accountId}],
+     queryKey: ["transactions", { from, to, accountId}],
      queryFn: async () => {
       const response = await client.api.transactions.$get({
         query: {

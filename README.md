@@ -388,7 +388,19 @@ Hono는 매우 유연합니다. 원하는 대로 앱을 작성할 수 있습니�
   - 화폐단위 변환 함수 추가
 - `features/transactions/api/use-get-transactions.ts` 수정
   - amount 금액 변환 추가
-
+- `app/(dashboard)/transactions/account-column.tsx` 생성
+  - DataTable 의 Account 컬럼 컴포넌트
+  - 클릭시 Account Edit sheet 활성 및 변경 가능
+- app/(dashboard)/transactions/columns.tsx 수정
+  - AccountColumn 으로 컬럼 교체
+- `features/transactions/hooks/use-open-transaction.ts` 생성
+  - 트랜잭션 sheet hook
+- `features/transactions/components/edit-transaction-sheet.tsx` 수정
+  - 트랜잭션 수정 sheet API 연결
+- transactions invalidate
+  - features/categories/api/use-edit-category.ts
+  - features/accounts/api/use-edit-account.ts
+  - features/accounts/api/use-delete-account.ts
 
 ## [07:54:10](https://www.youtube.com/watch?v=N_uNKAus0II&t=28450s) Transactions CSV import
 
