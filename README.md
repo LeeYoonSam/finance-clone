@@ -402,7 +402,27 @@ Hono는 매우 유연합니다. 원하는 대로 앱을 작성할 수 있습니�
   - features/accounts/api/use-edit-account.ts
   - features/accounts/api/use-delete-account.ts
 
+
 ## [07:54:10](https://www.youtube.com/watch?v=N_uNKAus0II&t=28450s) Transactions CSV import
+- `app/(dashboard)/transactions/page.tsx` 수정
+  - variants 추가
+  - upload button 추가
+    - csv import
+  - import, list 타입 구분해서 렌더링
+- `app/(dashboard)/transactions/upload-button.tsx` 생성
+  - `bun add react-papaparse`
+- `app/(dashboard)/transactions/import-card.tsx` 생성
+  - csv ImportCard 컴포넌트
+  - Cancel, Continue 처리
+  - Continue 시 선택된 CSV 데이터를 기준으로 데이터를 재가공(mappedData)
+  - date-fns 와 DateFormat 을 사용해서 날짜 변환
+- `app/(dashboard)/transactions/import-table.tsx` 생성
+  - imported CSV 데이터 Table 컴포넌트
+- `app/(dashboard)/transactions/table-head-select.tsx` 생성
+  - CSV import 테이블 헤더
+  - `bunx shadcn-ui@latest add select`
+  - Header 에 들어갈 option 을 추가해서 헤더에 옵션을 지정가능 하도록 설정
+
 
 ## [08:43:09](https://www.youtube.com/watch?v=N_uNKAus0II&t=31389s) Transactions account select
 
