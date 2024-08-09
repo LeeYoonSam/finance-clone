@@ -425,6 +425,12 @@ Hono는 매우 유연합니다. 원하는 대로 앱을 작성할 수 있습니�
 
 
 ## [08:43:09](https://www.youtube.com/watch?v=N_uNKAus0II&t=31389s) Transactions account select
+- `app/(dashboard)/transactions/page.tsx` 수정
+  - Import submit 구현
+  - account 선택 다이얼로그 표시
+- `features/accounts/hooks/use-select-account.tsx` 생성
+  - account 선택 다이얼로그 구현
+
 
 ## [08:56:40](https://www.youtube.com/watch?v=N_uNKAus0II&t=32200s) Summary API
 
