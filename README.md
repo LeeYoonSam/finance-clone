@@ -433,6 +433,19 @@ Hono는 매우 유연합니다. 원하는 대로 앱을 작성할 수 있습니�
 
 
 ## [08:56:40](https://www.youtube.com/watch?v=N_uNKAus0II&t=32200s) Summary API
+- `app/api/[[...route]]/summary.ts` 생성
+  - 대시보드 구성에 필요한 데이터 API
+  - db 에서 Raw 쿼리를 사용해서 여러 데이터 값을 가져와서 응답 데이터를 만듬
+- `app/api/[[...route]]/route.ts` 수정
+  - summary route 추가
+- `lib/utils.ts` 수정
+  - calculatePercentageChange 추가
+    - Amound 백분율 변환
+  - fillMissingDays 추가
+    - 모든 날짜의 데이터 추가
+- `features/transactions/api/use-get-transaction.ts` 수정
+  - 트랜잭션 리스트의 Amount 밀리유닛 변환
+  
 
 ## [09:28:52](https://www.youtube.com/watch?v=N_uNKAus0II&t=34132s) Dashboard cards
 
