@@ -445,9 +445,30 @@ Hono는 매우 유연합니다. 원하는 대로 앱을 작성할 수 있습니�
     - 모든 날짜의 데이터 추가
 - `features/transactions/api/use-get-transaction.ts` 수정
   - 트랜잭션 리스트의 Amount 밀리유닛 변환
-  
+
 
 ## [09:28:52](https://www.youtube.com/watch?v=N_uNKAus0II&t=34132s) Dashboard cards
+- `scripts/seed.ts` 생성
+  - 디비 테스트용 기본 시드 생성 스크립트
+- `package.json` 수정
+  - db:seed 스크립트 생성
+- `features/summary/api/use-get-summary.ts` 생성
+  - summary 리액트 쿼리 적용
+- `lib/utils.ts` 수정
+  - formatDateRange 추가
+  - formatPercentage 추가
+- `app/(dashboard)/page.tsx` 수정
+  - 대시보드 페이지 구성
+- `components/data-grid.tsx` 생성
+  - 데이터 그리드 컴포넌트
+  - `bun add react-icons` - 아이콘팩 설치
+- `components/data-card.tsx` 생성
+  - 데이터 카드 컴포넌트
+  - 아이콘 영역 VariantProps, cva 를 사용해서 variant 추가
+  - `bun add react-countup`
+    - 카운트 애니메이션 라이브러리 추가
+  - DataCardLoading 스켈레톤 추가
+
 
 ## [09:58:36](https://www.youtube.com/watch?v=N_uNKAus0II&t=35916s) Dashboard chart
 
