@@ -471,6 +471,28 @@ Hono는 매우 유연합니다. 원하는 대로 앱을 작성할 수 있습니�
 
 
 ## [09:58:36](https://www.youtube.com/watch?v=N_uNKAus0II&t=35916s) Dashboard chart
+- app/(dashboard)/page.tsx 수정
+  - DataCharts 컴포넌트 추가
+- components/data-charts.tsx 생성
+  - DataCharts 컴포넌트
+  - summary 정보로 차트 컴포넌트 추가
+- components/chart.tsx 생성
+  - 차트 컨테이너 카드 컴포넌트
+  - 차트 종류별로 지원(Area, Line, Bar)
+  - 차트 라이브러리 추가
+    - bun add recharts
+- components/area-variant.tsx 생성
+  - 차트 컴포넌트
+  - XAxis, Area 구현
+- components/custom-tooltip.tsx 수정
+  - 차트 위에 표시될 수치를 보여주는 툴팁 컴포넌트
+  - shadcn-ui 구분선 컴포넌트 추가
+    - bunx shadcn-ui@latest add separator
+- components/bar-variants.tsx 생성
+  - 막대 그래프 컴포넌트
+- components/line-variants.tsx 생성
+  - 선형 그래프 컴포넌트
+
 
 ## [10:26:04](https://www.youtube.com/watch?v=N_uNKAus0II&t=37564s) Dashboard pie
 
