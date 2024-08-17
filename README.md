@@ -495,6 +495,21 @@ Hono는 매우 유연합니다. 원하는 대로 앱을 작성할 수 있습니�
 
 
 ## [10:26:04](https://www.youtube.com/watch?v=N_uNKAus0II&t=37564s) Dashboard pie
+- components/data-charts.tsx 수정
+  - SpendingPie Chart 컴포넌트 추가
+- components/spending-pie.tsx 생성
+  - chart.tsx 복사
+  - Pie, Radar, Radial 차트 지원
+- components/pie-variant.tsx 생성
+  - 파이 차트 컴포넌트
+- components/category-tooltip.tsx 생성
+  - 카테고리 툴팁 컴포넌트
+- components/radar-variant.tsx 생성
+  - 레이더 차트 컴포넌트
+- components/radial-variant.tsx 생성
+  - 방사형 차트 컴포넌트
+- components/data-charts.tsx 수정
+  - Skeleton Loading 추가
 
 ## [10:45:05](https://www.youtube.com/watch?v=N_uNKAus0II&t=38705s) Date & account filters
 
