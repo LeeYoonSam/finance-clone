@@ -512,6 +512,26 @@ Hono는 매우 유연합니다. 원하는 대로 앱을 작성할 수 있습니�
   - Skeleton Loading 추가
 
 ## [10:45:05](https://www.youtube.com/watch?v=N_uNKAus0II&t=38705s) Date & account filters
+- components/header.tsx 수정
+  - Filter 컴포넌트 추가
+- components/filters.tsx
+  - Filter 컴포넌트
+  - AccountFilter 추가
+  - DateFilter 추가
+- bun add query-string 디펜던시 추가
+  - 쿼리스트링 처리
+- components/account-filter.tsx 생성
+  - AccountFilter 컴포넌트
+  - Select 컴포넌트를 사용해서 Account 를 선택하면 쿼리 스트링으로 url push
+- components/date-filter.tsx 생성
+  - DateFilter 컴포넌트
+  - Popover 컴포넌트를 사용해서 달력을 보여주고 날짜 범위 지정
+  - 날짜 범위를 지정하면 날짜 범위를 쿼리로 추가해서 url push
+- components/ui/popover.tsx 수정
+  - PopoverClose 컴포넌트 추가
+- lib/utils.ts 수정
+  - formatDateRange 버그 수정
+
 
 ## [11:07:08](https://www.youtube.com/watch?v=N_uNKAus0II&t=40028s) Deployment
 
