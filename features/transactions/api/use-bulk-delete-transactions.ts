@@ -8,7 +8,7 @@ import { toast } from "sonner";
 type ResponseType = InferResponseType<typeof client.api.transactions["bulk-delete"]["$post"]>;
 type RequestType = InferRequestType<typeof client.api.transactions["bulk-delete"]["$post"]>["json"];
 
-export const useBulkDeleteTransactions = () => {
+export const useBulkDeleteTransactions = (id?: string) => {
   const queryClient = useQueryClient();
 
   const mutation = useMutation<
@@ -22,8 +22,10 @@ export const useBulkDeleteTransactions = () => {
     },
     onSuccess: () => {
       toast.success("Transaction deleted");
+      queryClient.invalidateQueries({ queryKey: ["transaction", { id }] });
       queryClient.invalidateQueries({ queryKey: ["transactions"] });
-      // Todo: Also invalidate summary
+      queryClient.invalidateQueries({ queryKey: ["summary"] });
+      
     },
     onError: () => {
       toast.success("Failed to deleted transactions");

@@ -534,6 +534,9 @@ Hono는 매우 유연합니다. 원하는 대로 앱을 작성할 수 있습니�
 
 
 ## [11:07:08](https://www.youtube.com/watch?v=N_uNKAus0II&t=40028s) Deployment
+- features API summary invalidateQueries 처리 추가
+- Vercel 배포
+
 
 ## [11:12:59](https://www.youtube.com/watch?v=N_uNKAus0II&t=40379s) Additional content
 
